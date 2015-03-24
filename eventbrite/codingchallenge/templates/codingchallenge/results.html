@@ -1,0 +1,26 @@
+{% extends "codingchallenge/base.html" %}
+{% load codingchallenge_extras %}
+
+{% block content %}
+
+<h1>This is page {{page_info.page_number}} of {{page_info.page_count}} ({{page_info.page_size}} items per page, {{page_info.object_count}} items overall)</h1>
+
+{% include "codingchallenge/page_links.html" %}
+
+<ol start="{{ page_info|start_index }}">
+{% for event in events %}
+    <li>
+    	<h3>{{ event.name.text }}</h3>
+    	<ul>
+    		<li><a href="{{ event.url }}">{{ event.url }}</a></li>
+    		<li>{{ event.description.text }}</li>
+    		<li>Location -- {{ event.venue.address.address_1 }} {{ event.venue.address.city }} {{ event.venue.address.region }} {{ event.venue.address.postal_code }} {{ event.venue.address.country }}</li>
+    		<li>Time -- {{ event.start.local }} - {{ event.end.local }}</li>
+    	</ul>
+    </li>
+{% endfor %}
+</ol>
+
+{% include "codingchallenge/page_links.html" %}
+
+{% endblock %}

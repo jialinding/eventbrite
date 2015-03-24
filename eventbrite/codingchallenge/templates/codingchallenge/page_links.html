@@ -1,0 +1,15 @@
+{% load codingchallenge_extras %}
+
+<a href="{% url 'codingchallenge:results' category_id_1 category_id_2 category_id_3 1 %}">First Page</a>
+
+{% if page_info.page_number|sub_one > 0 %}
+<a href="{% url 'codingchallenge:results' category_id_1 category_id_2 category_id_3 page_info.page_number|sub_one %}">Previous Page</a>
+{% endif %}
+
+{% if page_info.page_number|add_one <= page_info.page_count %}
+<a href="{% url 'codingchallenge:results' category_id_1 category_id_2 category_id_3 page_info.page_number|add_one %}">Next Page</a>
+{% endif %}
+
+<a href="{% url 'codingchallenge:results' category_id_1 category_id_2 category_id_3 page_info.page_count %}">Last Page</a>
+
+<a href="{% url 'codingchallenge:index' %}">Choose Again</a>
