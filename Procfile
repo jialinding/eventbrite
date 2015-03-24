@@ -1,1 +1,1 @@
-web: gunicorn eventbrite.wsgi --pythonpath /eventbrite --log-file -
+web: gunicorn eventbrite.wsgi --log-file -
