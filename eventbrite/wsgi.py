@@ -16,5 +16,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "eventbrite.settings")
 """The follow is copy/pasted from the Heroku Django guide"""
 from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
+from whitenoise.django import DjangoWhiteNoise
 
 application = Cling(get_wsgi_application())
+application = DjangoWhiteNoise(application)
