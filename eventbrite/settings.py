@@ -94,9 +94,15 @@ import dj_database_url
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config(default='postgres://user:pass@host/db')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-DATABASES['default']['NAME'] = 'eventbrite'
-DATABASES['default']['USER'] = 'Jialin'
-DATABASES['default']['HOST'] = 'localhost'
+# DATABASES['default']['NAME'] = 'eventbrite'
+# DATABASES['default']['USER'] = 'Jialin'
+# DATABASES['default']['HOST'] = 'localhost'
+# DATABASES['default']['PORT'] = '5432'
+
+DATABASES['default']['NAME'] = 'd2froj0ir6a3h9'
+DATABASES['default']['USER'] = 'mvtagwjkbasqdd'
+DATABASES['default']['PASSWORD'] = '2jRi158heE2P-tDfCQkv-jbTR5'
+DATABASES['default']['HOST'] = 'ec2-107-22-173-230.compute-1.amazonaws.com'
 DATABASES['default']['PORT'] = '5432'
 
 
