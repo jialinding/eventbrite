@@ -94,6 +94,9 @@ import dj_database_url
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config(default='postgres://user:pass@host/db')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+DATABASES['default']['NAME'] = 'eventbrite'
+DATABASES['default']['HOST'] = 'localhost'
+
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
