@@ -97,6 +97,7 @@ DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 DATABASES['default']['NAME'] = 'eventbrite'
 DATABASES['default']['USER'] = 'Jialin'
 DATABASES['default']['HOST'] = 'localhost'
+DATABASES['default']['PORT'] = '5432'
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
