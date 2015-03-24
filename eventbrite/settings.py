@@ -24,9 +24,6 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -53,17 +50,6 @@ ROOT_URLCONF = 'eventbrite.urls'
 
 WSGI_APPLICATION = 'eventbrite.wsgi.application'
 
-
-# # Database
-# # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -77,12 +63,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-STATIC_URL = '/static/'
-
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
@@ -92,13 +72,8 @@ TEMPLATE_DIRS = (
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES = {}
-DATABASES['default'] =  dj_database_url.config(default='postgres://user:pass@host/db')
+DATABASES['default'] = dj_database_url.config(default='postgres://user:pass@host/db')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-# DATABASES['default']['NAME'] = 'eventbrite'
-# DATABASES['default']['USER'] = 'Jialin'
-# DATABASES['default']['HOST'] = 'localhost'
-# DATABASES['default']['PORT'] = '5432'
-
 DATABASES['default']['NAME'] = 'd2froj0ir6a3h9'
 DATABASES['default']['USER'] = 'mvtagwjkbasqdd'
 DATABASES['default']['PASSWORD'] = '2jRi158heE2P-tDfCQkv-jbTR5'
@@ -113,7 +88,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
-import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
