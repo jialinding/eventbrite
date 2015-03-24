@@ -95,6 +95,7 @@ DATABASES = {}
 DATABASES['default'] =  dj_database_url.config(default='postgres://user:pass@host/db')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 DATABASES['default']['NAME'] = 'eventbrite'
+DATABASES['default']['USER'] = 'Jialin'
 DATABASES['default']['HOST'] = 'localhost'
 
 
